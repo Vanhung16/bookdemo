@@ -34,7 +34,7 @@ public class WebSercurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/hello").permitAll()// /hello được truy cập mà ko cần authentication
+                .antMatchers("/signUp").permitAll()// /hello được truy cập mà ko cần authentication
                 .and()
                 .authorizeRequests()
                 .anyRequest().authenticated() // cac thu con lai can phai authentication mới được truy cập
