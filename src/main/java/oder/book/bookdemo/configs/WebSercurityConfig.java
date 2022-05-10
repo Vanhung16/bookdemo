@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 public class WebSercurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
+    @Autowired(required = true)
     UserDetailServiceImpl userDetailService;
 
     @Bean // configure to crypto
