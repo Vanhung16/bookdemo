@@ -49,7 +49,7 @@ public class UserController {
     }
     
 
-    @RequestMapping(value="signUp")
+    @PostMapping(value="signUp")
     public ModelAndView getMethodName(ModelMap model, @Valid @ModelAttribute("user") UserDTO dto, BindingResult result) {
         
         if(result.hasErrors()){
