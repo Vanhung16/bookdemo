@@ -22,10 +22,10 @@ import javax.validation.Valid;
 @RequestMapping("")
 public class AuthController {
     @Autowired
-    private IUserService userService;
+    IUserService userService;
 
     @Autowired
-    private UserDetailServiceImpl userDetailService;
+    UserDetailServiceImpl userDetailService;
 
     @Autowired
     PasswordEncoder passwordEncoder;

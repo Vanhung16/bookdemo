@@ -15,14 +15,14 @@ public class BookdemoApplication {
 		SpringApplication.run(BookdemoApplication.class, args);
 	}
 
-//	public CommandLineRunner data(IUserService userService){
-//		return args -> {
-//			UserDTO dto = new UserDTO("user", "$2a$10$iaA5jcbqZbs5Qfz4eC1GR.djm6ug32hghD0oRxY5EasJgqQkgCk4O", "USER");
-//			User user = new User();
-//			BeanUtils.copyProperties(dto, user);
-//			userService.save(user);
-//			//hello
-//		};
-//	}
+	public CommandLineRunner data(IUserService userService){
+		return args -> {
+			UserDTO dto = new UserDTO("aaaaaaaa", "$2a$10$iaA5jcbqZbs5Qfz4eC1GR.djm6ug32hghD0oRxY5EasJgqQkgCk4O", "USER");
+			User user = new User();
+			BeanUtils.copyProperties(dto, user);
+			userService.save(user);
+			//hello
+		};
+	}
 
 }
