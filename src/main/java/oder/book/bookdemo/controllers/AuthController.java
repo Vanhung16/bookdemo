@@ -35,21 +35,22 @@ public class AuthController {
          model.addAttribute("user",new UserDTO());
          return "login";
      }
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login( @Valid @ModelAttribute("user") UserDTO userDTO){
+//     @RequestMapping(value = "/login", method = RequestMethod.POST)
+//     public String login( @Valid @ModelAttribute("user") UserDTO userDTO){
 
 
-        User user = userService.findByUsername(userDetailService.loadUserByUsername(userDTO.getUsername()).getUsername());
-        if(user.getRole() == "USER"){
-            return "user/welcome";
-        }else{
-            return "admin/hello";
-        }
-    }
-    @RequestMapping(value = "/signUp", method = RequestMethod.GET)
-    public String addUser(ModelMap model){
-        model.addAttribute("user", new UserDTO());
-        return "/user/signUp";
-    }
+//         User user = userService.findByUsername(userDetailService.loadUserByUsername(userDTO.getUsername()).getUsername());
+// //        if(user.getRole() == "USER"){
+// //            return "/user/welcome";
+// //        }else{
+// //            return "/admin/hello";
+// //        }
+//         return "hiihi";
+//     }
+    // @RequestMapping(value = "signUp", method = RequestMethod.GET)
+    // public String addUser(ModelMap model){
+    //     model.addAttribute("user", new UserDTO());
+    //     return "/user/signUp";
+    // }
 
 }
