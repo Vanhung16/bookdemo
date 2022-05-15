@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1>this is client page</h1>
-<form action="/logout" method="post">
-    <input type="submit" value="SIgn out">
-</form>
+    <h1>Welcome, <span>[[${#httpServletRequest.remoteUser}]]</span>
+    
+            <form th:action="@{logout}" method="post">
+
+                <input type="submit" class="btn btn-success" value="Sign Out">
+            </form>
+
+    </h1>
 </body>
 </html>
